@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "pnpm install && pnpm run build"
   publish = "dist"
   functions = "netlify/functions"
 
@@ -55,13 +55,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
   NPM_CONFIG_PRODUCTION = "false"
   CI = "false"
 
 
 [dev]
-  command = "npm run dev"
+  command = "pnpm run dev"
   port = 5173
   targetPort = 5173
   autoLaunch = false
